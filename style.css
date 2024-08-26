@@ -204,20 +204,20 @@ body {
 /* Small Screens (Mobile Phones) */
 @media (max-width: 768px) {
     .chatbot {
-        width: 100%;
+        width: 90%;
         border-radius: 0;
         box-shadow: none;
-        height: 90vh;
+        height: 85vh;
         max-height: 90vh;
     }
 
     .chatbox {
-        padding: 20px 10px 70px;
+        padding: 20px 10px 80px;
     }
 
     .chat-input textarea {
         font-size: 0.85rem;
-        padding: 15px;
+        padding: 10px;
     }
 
     .chatbox .chat p {
