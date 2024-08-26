@@ -247,3 +247,41 @@ body {
         font-size: 1.1rem;
     }
 }
+/* General styling for larger screens */
+.chatbot-container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Responsive styling for screens 6.7 inches */
+@media only screen and (max-width: 430px) {
+    .chatbot-container {
+        width: 90%; /* Adjust the width to fit the screen */
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .chatbot-message {
+        padding: 8px 10px; /* Adjust padding for better fit */
+    }
+
+    .chatbot-input {
+        width: 100%; /* Full-width input for mobile */
+        padding: 10px;
+    }
+
+    .chatbot-button {
+        width: 100%; /* Full-width button for mobile */
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Other necessary adjustments */
+    .chatbot-header, .chatbot-footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
