@@ -207,8 +207,8 @@ body {
         width: 100%;
         border-radius: 0;
         box-shadow: none;
-        height: 100vh;
-        max-height: 100vh;
+        height: 90vh;
+        max-height: 90vh;
     }
 
     .chatbox {
