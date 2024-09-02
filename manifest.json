@@ -1,7 +1,10 @@
 {
   "name": "My Chatbot",
   "short_name": "Chatbot",
+  
   "start_url": "https://chandan-gupta32.github.io/chatbot/",
+
+
   "display": "standalone",
   "icons": [
     {
