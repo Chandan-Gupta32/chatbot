@@ -68,5 +68,20 @@ chatInput.addEventListener("keydown", (e) => {
 
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 
+function scrollChatToBottom() {
+    const chatbox = document.querySelector('.chatbox');
+    chatbox.scrollTop = chatbox.scrollHeight;
+}
+
+// Ensure scrolling to bottom on page load
+window.addEventListener('load', scrollChatToBottom);
+
+// Ensure scrolling to bottom after sending a message
+document.getElementById('send-btn').addEventListener('click', function() {
+    // Your existing code to send the message
+    setTimeout(scrollChatToBottom, 100);  // Delay to ensure message is added before scrolling
+});
+
+
 
 
