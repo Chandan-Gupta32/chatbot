@@ -1,6 +1,3 @@
-
-
-
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 const chatbox = document.querySelector(".chatbox");
@@ -41,6 +38,7 @@ const generateResponse = async (usermsg, incomingChatLi) => {
         console.error("Error:", error.message);
         messageElement.textContent = "Oops! Something went wrong. Please try again.";
     }
+    scrollChatToBottom(); // Ensure scrolling after generating a response
 };
 
 const sendMessage = () => {
@@ -51,10 +49,14 @@ const sendMessage = () => {
 
     const incomingChatLi = createChatLi("Thinking...", "incoming");
     chatbox.appendChild(incomingChatLi);
-    chatbox.scrollTo(0, chatbox.scrollHeight);
+    scrollChatToBottom(); // Ensure scrolling after appending the message
     generateResponse(userMessage, incomingChatLi);
 
     chatInput.value = "";
+};
+
+const scrollChatToBottom = () => {
+    chatbox.scrollTop = chatbox.scrollHeight;
 };
 
 sendChatBtn.addEventListener("click", sendMessage);
@@ -68,8 +70,5 @@ chatInput.addEventListener("keydown", (e) => {
 
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 
-
-
-
-
-
+// Ensure scrolling to the bottom on page load
+window.addEventListener('load', scrollChatToBottom);
