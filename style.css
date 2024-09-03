@@ -212,7 +212,10 @@ body {
     }
 
     .chatbox {
-        padding: 20px 10px 80px;
+         height: calc(100vh - 130px); /* Adjust for smaller screens */
+       
+        padding: 10px 10px 60px;
+
     }
 
     .chat-input textarea {
