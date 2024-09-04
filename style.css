@@ -184,7 +184,7 @@ body {
 /* Medium Screens (Tablets, Smaller Laptops) */
 @media (max-width: 1024px) {
     .chatbot {
-        width: 80%;
+        /* width: 80%; */
     }
 
     .chatbox .chat p {
@@ -204,7 +204,7 @@ body {
 /* Small Screens (Mobile Phones) */
 @media (max-width: 768px) {
     .chatbot {
-        width: 92%;
+        /* width: 92%; */
         border-radius: 0;
         box-shadow: none;
         height: 100vh;
