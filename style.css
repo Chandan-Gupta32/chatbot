@@ -133,7 +133,7 @@ body {
     bottom: 0;
     width: 100%;
     background: #2c3e50; /* Dark blue background */
-    padding: 5px 20px;
+    padding: 10px 20px;
     border-top: 1px solid #ccc;
     gap: 5px;
     display: flex;
@@ -207,15 +207,14 @@ body {
         width: 92%;
         border-radius: 0;
         box-shadow: none;
-        height: 80vh;
-        max-height: 90vh;
+        height: 100vh;
+        max-height: 100vh;
     }
 
     .chatbox {
-         height: calc(100vh - 130px); /* Adjust for smaller screens */
+        height: calc(100vh - 130px); /* Adjust for smaller screens */
        
         padding: 10px 10px 60px;
-
     }
 
     .chat-input textarea {
@@ -235,8 +234,8 @@ body {
 /* Extra Small Screens (Very Small Devices) */
 @media (max-width: 480px) {
     .chatbox {
+        height: calc(100vh - 130px); 
         padding: 15px 5px 60px;
-         height: calc(100vh - 130px); 
     }
 
     .chatbox .chat p {
@@ -255,9 +254,37 @@ body {
 .chatbot-container {
     width: 50%;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
     font-size: 16px;
 }
 
+/* Responsive styling for screens 6.7 inches */
+@media only screen and (max-width: 430px) {
+    .chatbot-container {
+        width: 90%; /* Adjust the width to fit the screen */
+        padding: 10px;
+        font-size: 14px;
+    }
 
+    .chatbot-message {
+        padding: 8px 10px; /* Adjust padding for better fit */
+    }
+
+    .chatbot-input {
+        width: 100%; /* Full-width input for mobile */
+        padding: 10px;
+    }
+
+    .chatbot-button {
+        width: 100%; /* Full-width button for mobile */
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Other necessary adjustments */
+    .chatbot-header, .chatbot-footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
 
