@@ -55,7 +55,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
                 0 32px 64px -48px rgba(0, 0, 0, 0.5);
-     padding: 20px;
+     padding: 25px;
 }
 
 .show-chatbot .chatbot {
@@ -133,7 +133,7 @@ body {
 .chat-input {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 90%;
     background: #2c3e50; /* Dark blue background */
     padding: 10px 20px;
     border-top: 1px solid #ccc;
