@@ -165,64 +165,26 @@ body {
 .chat-input textarea:valid ~ span {
     visibility: visible;
 }
+/* Responsive styling for different screen sizes */
 
-@media (max-width: 490px) {
+/* Small Devices (320px - 480px) */
+@media (max-width: 480px) {
     .chatbot {
         width: 100%;
         border-radius: 0;
-    }
-
-    .chatbox {
-        height: 90%;
-    }
-}
-
-.chatbot header span {
-    display: block;
-}
-
-/* Medium Screens (Tablets, Smaller Laptops) */
-@media (max-width: 1024px) {
-    .chatbot {
-        /* width: 80%; */
-    }
-
-    .chatbox .chat p {
-        font-size: 0.9rem;
-    }
-
-    .chatbox .incoming span,
-    .chatbox .outgoing p {
-        font-size: 1rem;
-    }
-
-    .chat-input textarea {
-        font-size: 0.9rem;
-    }
-}
-
-/* Small Screens (Mobile Phones) */
-@media (max-width: 768px) {
-    .chatbot {
-        /* width: 92%; */
-        border-radius: 0;
-        box-shadow: none;
-        height: 90vh;
-        max-height: 100vh;
+        height: 100vh;
     }
 
     .chatbox {
         height: calc(100vh - 130px); /* Adjust for smaller screens */
-       
         padding: 10px 10px 60px;
     }
 
-    .chat-input textarea {
+    .chatbox .chat p {
         font-size: 0.85rem;
-        padding: 10px;
     }
 
-    .chatbox .chat p {
+    .chat-input textarea {
         font-size: 0.85rem;
     }
 
@@ -231,60 +193,78 @@ body {
     }
 }
 
-/* Extra Small Screens (Very Small Devices) */
-@media (max-width: 480px) {
-    .chatbox {
-        height: calc(100vh - 130px); 
-        padding: 15px 5px 60px;
+/* Medium Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .chatbot {
+        width: 100%;
+        border-radius: 0;
+        height: 90vh;
     }
 
-    .chatbox .chat p {
-        font-size: 0.8rem;
+    .chatbox {
+        height: calc(90vh - 130px); /* Adjust for medium screens */
+        padding: 15px 10px 60px;
     }
 
     .chat-input textarea {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .chatbox .chat p {
+        font-size: 0.9rem;
     }
 
     .chat-input span {
-        font-size: 1.1rem;
-    }
-}
-/* General styling for larger screens */
-.chatbot-container {
-    width: 50%;
-    margin: auto;
-    padding: 20px;
-    font-size: 16px;
-}
-
-/* Responsive styling for screens 6.7 inches */
-@media only screen and (max-width: 430px) {
-    .chatbot-container {
-        width: 90%; /* Adjust the width to fit the screen */
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .chatbot-message {
-        padding: 8px 10px; /* Adjust padding for better fit */
-    }
-
-    .chatbot-input {
-        width: 100%; /* Full-width input for mobile */
-        padding: 10px;
-    }
-
-    .chatbot-button {
-        width: 100%; /* Full-width button for mobile */
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    /* Other necessary adjustments */
-    .chatbot-header, .chatbot-footer {
-        font-size: 14px;
-        padding: 10px;
+        font-size: 1.3rem;
     }
 }
 
+/* Large Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .chatbot {
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    .chatbox {
+        height: 75vh;
+        padding: 20px 15px 80px;
+    }
+
+    .chat-input textarea {
+        font-size: 1rem;
+    }
+
+    .chatbox .chat p {
+        font-size: 1rem;
+    }
+
+    .chat-input span {
+        font-size: 1.4rem;
+    }
+}
+
+/* Extra Large Devices (1025px and above) */
+@media (min-width: 1025px) {
+    .chatbot {
+        width: 420px;
+        border-radius: 15px;
+    }
+
+    .chatbox {
+        height: 510px;
+        padding: 30px 20px 100px;
+    }
+
+    .chat-input textarea {
+        font-size: 1rem;
+    }
+
+    .chatbox .chat p {
+        font-size: 1rem;
+    }
+
+    .chat-input span {
+        font-size: 1.35rem;
+    }
+}
